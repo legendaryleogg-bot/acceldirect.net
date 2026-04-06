@@ -1,110 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACCEL DIRECT LLC</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a0a0a;
-            color: #fff;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .container {
-            text-align: center;
-            max-width: 640px;
-            padding: 2rem;
-        }
-        .logo {
-            font-size: 2.5rem;
-            font-weight: 700;
-            letter-spacing: 0.15em;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(135deg, #fff 0%, #a0a0a0 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .tagline {
-            font-size: 1.1rem;
-            color: #888;
-            margin-bottom: 2rem;
-            letter-spacing: 0.05em;
-        }
-        .divider {
-            width: 60px;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #444, transparent);
-            margin: 0 auto 2rem;
-        }
-        .description {
-            font-size: 1rem;
-            line-height: 1.7;
-            color: #aaa;
-            margin-bottom: 2.5rem;
-        }
-        .contact {
-            font-size: 0.9rem;
-            color: #666;
-        }
-        .contact a {
-            color: #888;
-            text-decoration: none;
-            border-bottom: 1px solid #333;
-            transition: color 0.2s, border-color 0.2s;
-        }
-        .contact a:hover {
-            color: #fff;
-            border-color: #fff;
-        }
-        .legal {
-            margin-top: 3rem;
-            font-size: 0.8rem;
-            color: #555;
-        }
-        .legal a {
-            color: #666;
-            text-decoration: none;
-            border-bottom: 1px solid #333;
-            transition: color 0.2s, border-color 0.2s;
-        }
-        .legal a:hover {
-            color: #fff;
-            border-color: #fff;
-        }
-        .legal span {
-            margin: 0 0.5rem;
-        }
-        .brand-line {
-            margin-top: 2.5rem;
-            font-size: 0.7rem;
-            color: #444;
-            letter-spacing: 0.08em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accel Direct — Business Solutions</title>
+  <meta name="description" content="Accel Direct LLC builds systems that connect industries. B2B solutions in data intelligence, strategic partnerships, and scalable infrastructure.">
+  <meta property="og:title" content="Accel Direct — Business Solutions">
+  <meta property="og:description" content="Accel Direct LLC builds systems that connect industries. B2B solutions in data intelligence, strategic partnerships, and scalable infrastructure.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://acceldirect.net/">
+  <link rel="canonical" href="https://acceldirect.net/">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      height: 100%;
+    }
+
+    body {
+      min-height: 100%;
+      background: #212121;
+      color: #d0d0d0;
+      font-family: system-ui, -apple-system, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .nav {
+      padding: 28px 48px;
+    }
+
+    .nav .wordmark {
+      font-size: 14px;
+      font-weight: 700;
+      color: #c8c8c8;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      padding: 100px 48px 80px;
+      text-align: center;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 700;
+      color: #d0d0d0;
+      line-height: 1.2;
+      max-width: 600px;
+      margin: 0 auto 24px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero .accent-line {
+      width: 60px;
+      height: 2px;
+      background: #0066FF;
+    }
+
+    .pillars {
+      padding: 40px 48px 80px;
+      display: flex;
+      justify-content: center;
+      gap: 60px;
+    }
+
+    .pillar {
+      text-align: center;
+      display: inline-flex;
+      flex-direction: column;
+      align-items: stretch;
+    }
+
+    .pillar .pillar-line {
+      width: 100%;
+      height: 2px;
+      background: #0066FF;
+      margin-bottom: 7px;
+    }
+
+    .pillar .label {
+      font-size: 13px;
+      font-weight: 600;
+      color: #d0d0d0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .divider {
+      width: 80%;
+      max-width: 720px;
+      margin: 0 auto;
+      height: 1px;
+      background: #2a2a2a;
+    }
+
+    .contact {
+      padding: 60px 48px 40px;
+      text-align: center;
+    }
+
+    .contact .heading {
+      font-size: 16px;
+      font-weight: 600;
+      color: #c8c8c8;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .contact .email {
+      font-size: 15px;
+      color: #0066FF;
+      text-decoration: none;
+    }
+
+    .contact .email:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 20px 48px 32px;
+      text-align: center;
+      font-size: 11px;
+      color: #555;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        padding: 60px 24px 50px;
+      }
+
+      .hero h1 {
+        font-size: 28px;
+      }
+
+      .pillars {
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        padding: 30px 24px 50px;
+      }
+
+      .nav {
+        padding: 20px 24px;
+      }
+
+      .contact {
+        padding: 40px 24px 30px;
+      }
+
+      footer {
+        padding: 16px 24px 24px;
+      }
+    }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <div class="logo">ACCEL DIRECT</div>
-        <div class="tagline">Business Services</div>
-        <div class="divider"></div>
-        <p class="description">
-            We build automated lead generation systems that connect businesses
-            with qualified prospects. Performance-driven. Results-measured.
-        </p>
-        <p class="contact">
-            <a href="mailto:Support@AccelDirect.net">Support@AccelDirect.net</a>
-        </p>
-        <p class="legal">
-            <a href="/privacy.html">Privacy Policy</a>
-            <span>·</span>
-            <a href="/terms.html">Terms of Service</a>
-        </p>
-        <p class="brand-line">Warm Harbor is an Accel Direct brand</p>
+  <nav class="nav">
+    <div class="wordmark">Accel Direct</div>
+  </nav>
+
+  <main class="hero">
+    <h1>We build the systems behind better decisions.</h1>
+    <div class="accent-line"></div>
+  </main>
+
+  <section class="pillars">
+    <div class="pillar">
+      <div class="pillar-line"></div>
+      <div class="label">Data Intelligence</div>
     </div>
+    <div class="pillar">
+      <div class="pillar-line"></div>
+      <div class="label">Strategic Partnerships</div>
+    </div>
+    <div class="pillar">
+      <div class="pillar-line"></div>
+      <div class="label">Scalable Infrastructure</div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <section class="contact">
+    <div class="heading">Get in touch</div>
+    <a href="mailto:admin@acceldirect.net" class="email">admin@acceldirect.net</a>
+  </section>
+
+  <footer>
+    &copy; 2026 Accel Direct LLC
+  </footer>
 </body>
 </html>
